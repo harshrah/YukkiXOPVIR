@@ -246,7 +246,7 @@ S_B_2 : "sᴇᴛᴛɪɴɢs ⚙️"
 S_B_3 : "sᴜᴘᴘᴏʀᴛ 💌"
 S_B_4 : "🌟 ᴄʜᴀɴɴᴇʟ"
 S_B_5 : "➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕"
-S_B_6 : "💶 ʏᴏᴜᴛᴜʙᴇ 💵"
+S_B_6 : "💶 Owner 💵"
 S_B_7 : "🔥 ᴏᴡɴᴇʀ 🔥"
 S_B_8 : "🤔 ʜᴇʟᴩ 🤔"
 
@@ -426,9 +426,9 @@ pbot_13 : "\n**<b>Unfetched Chats:</b>**\n\n"
 
 
 #Gbanned
-gban_1 : "You want to gban yourself? How Fool!"
+gban_1 : "Khud ko Gban Krne Chale Ho Chutiye Ho kYa Sir? **KIDSS!**"
 gban_2 : "Should i block myself? Lol"
-gban_3 : "You want to block a sudo user?"
+gban_3 : "Aukat Me Raho Sir/Mam...He Is My [Owner](https://t.me/ITZVIR99)/Sudouser..!!"
 gban_4 : "{0} is already **gbanned** from the bot."
 gban_5 : "**Initializing Global Ban on {0}**\n\nExpected Time : {1}."
 gban_6 : "**Gbanned Successfully**\n\nBanned **{0}** from **{1}** chats."
