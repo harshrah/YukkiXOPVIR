@@ -98,9 +98,8 @@ setting_11 : "☘️ Wʜᴀᴛ ɪs Tʜɪs?\n\n𝟷) Eᴠᴇʀʏᴏɴᴇ: Aɴʏ�
 setting_12 : "♻️ Yᴏᴜ'ᴠᴇ ɴᴏ ᴄʜᴀɴɴᴇʟ ɪᴅ ᴅᴇғɪɴᴇᴅ ғᴏʀ ᴄʜᴀɴɴᴇʟ ᴍᴏᴅᴇ. Pʟᴇᴀsᴇ ᴅᴇғɪɴᴇ ᴡɪᴛʜ /channelplay."
 setting_13 : "☘️ Cᴀɴ'ᴛ ᴄʜᴀɴɢᴇ ᴘʟᴀʏ ᴍᴏᴅᴇ ɪɴ ᴀᴄᴛɪᴠᴇ ɢʀᴏᴜᴘ ᴄᴀʟʟ. Pʟᴇᴀsᴇ sᴛᴏᴘ ᴛʜᴇ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ғɪʀsᴛ ᴡɪᴛʜ /stop."
 setting_14 : "☘️ Wʜᴀᴛ ɪs Tʜɪs?\n\nWʜᴇɴ ᴀᴄᴛɪᴠᴀᴛᴇᴅ, Bᴏᴛ ᴡɪʟʟ ᴅᴇʟᴇᴛᴇ ɪᴛs ᴇxᴇᴄᴜᴛᴇᴅ ᴄᴏᴍᴍᴀɴᴅs (/play, /pause, /shuffle, /stop Eᴛᴄ.) ɪᴍᴍᴇᴅɪᴀᴛᴇʟʏ.\n\nBᴏᴛ ᴡɪʟʟ ʙᴇ ʀᴇǫᴜɪʀɪɴɢ ᴅᴇʟᴇᴛᴇ ᴍᴇssᴀɢᴇs ᴀᴅᴍɪɴ ʀɪɢʜᴛ ғᴏʀ ᴛʜɪs ᴛᴏ ᴡᴏʀᴋ ᴘʀᴏᴘᴇʀʟʏ."
-setting_15 : "Failed to resolve peer, Make sure you have added bot in your channel and promoted it as admin.\n\nTry setting /channelplay again.."
-setting_16 : "⁉️ What is This?\n\nWhen activated, Bot will suggest your chat in every 1-2 hour about bot commands (How to use them, which are the commands and many other things) randomly."
-
+setting_15 : "Fᴀɪʟᴇᴅ ᴛᴏ ʀᴇsᴏʟᴠᴇ ᴘᴇᴇʀ, Mᴀᴋᴇ sᴜʀᴇ ʏᴏᴜ ʜᴀᴠᴇ ᴀᴅᴅᴇᴅ ʙᴏᴛ ɪɴ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴘʀᴏᴍᴏᴛᴇᴅ ɪᴛ ᴀs ᴀᴅᴍɪɴ.\n\nTʀʏ sᴇᴛᴛɪɴɢ /channelplay ᴀɢᴀɪɴ.."
+setting_16 : "☘️ Wʜᴀᴛ ɪs Tʜɪs?\n\nWʜᴇɴ ᴀᴄᴛɪᴠᴀᴛᴇᴅ, Bᴏᴛ ᴡɪʟʟ sᴜɢɢᴇsᴛ ʏᴏᴜʀ ᴄʜᴀᴛ ɪɴ ᴇᴠᴇʀʏ 𝟷-𝟸 ʜᴏᴜʀ ᴀʙᴏᴜᴛ ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅs (Hᴏᴡ ᴛᴏ ᴜsᴇ ᴛʜᴇᴍ, ᴡʜɪᴄʜ ᴀʀᴇ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅs ᴀɴᴅ ᴍᴀɴʏ ᴏᴛʜᴇʀ ᴛʜɪɴɢs) ʀᴀɴᴅᴏᴍʟʏ."
 
 set_cb_1 : "Getting Audio Quality Panel..."
 set_cb_2 : "Getting Video Quality Panel..."
