@@ -174,7 +174,7 @@ async def stream(
                 original_chat_id,
                 _["queue_4"].format(
                     position, title[:30], duration_min, user_name
-                ),
+                ),disable_web_page_preview=True
             )
         else:
             if not forceplay:
