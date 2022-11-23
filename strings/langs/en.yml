@@ -142,7 +142,7 @@ cplay_5 : "Only Channels are supported."
 cplay_6 : "You need to be the **Owner** of the channel[{0}] to connect it with this group.\n**Channel's Owner:** @{1}\n\nAlternatively you can link your group to that channel and then try connnecting with `/channelplay linked`"
 
 #Play
-play_1 : "🔎"
+play_1 : "Sᴇᴀʀᴄʜɪɴɢ...Pʟᴇᴀsᴇ Wᴀɪᴛ...!! 🍁💫"
 play_2 : "🏷**ᴄʜᴀɴɴᴇʟ ᴘʟᴀʏ ᴍᴏᴅᴇ**\n🔄 ᴘʀᴏᴄᴇssɪɴɢ ǫᴜᴇʀʏ... ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ!\n\n**ʟɪɴᴋᴇᴅ ᴄʜᴀɴɴᴇʟ:** {0}"
 play_3 : "ꜰᴀɪʟᴇᴅ ᴛᴏ ᴘʀᴏᴄᴇss ǫᴜᴇʀʏ !"
 play_4 : "🖇 **ᴀᴅᴍɪɴs ᴏɴʟʏ ᴘʟᴀʏ**\nᴏɴʟʏ ᴀᴅᴍɪɴs ᴀɴᴅ ᴀᴜᴛʜ ᴜsᴇʀs ᴄᴀɴ ᴘʟᴀʏ ᴍᴜsɪᴄ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ.\n\nᴄʜᴀɴɢᴇ ᴍᴏᴅᴇ ᴠɪᴀ /playmode ᴀɴᴅ ɪꜰ ʏᴏᴜ'ʀᴇ ᴀʟʀᴇᴀᴅʏ ᴀᴅᴍɪɴ, ʀᴇʟᴏᴀᴅ ᴀᴅᴍɪɴᴄᴀᴄʜᴇ ᴠɪᴀ /admincache or /reload"
