@@ -111,8 +111,8 @@ set_cb_7 : "Gᴇᴛᴛɪɴɢ Aᴜᴛʜ Usᴇʀs Lɪsᴛ..Pʟᴇᴀsᴇ Wᴀɪᴛ
 set_cb_8 : "Gᴇᴛᴛɪɴɢ Bᴀᴄᴋ...🍁💫"
 
 # Misc
-ustats_1 : "No User Stats Found."
-ustats_2 : "Greetings!, You have played **{0}** tracks till now with a whopping count of **{1}** times.\n\nTop {2} played by you:\n\n"
+ustats_1 : "Usᴇʀ Sᴛᴀᴛs Nᴏᴛ Fᴏᴜɴᴅ...!!"
+ustats_2 : "Gʀᴇᴇᴛɪɴɢs..!!, Yᴏᴜ Hᴀᴠᴇ Pʟᴀʏᴇᴅ {0} Tʀᴀᴄᴋs Tɪʟʟ Nᴏᴡ Wɪᴛʜ A Wʜᴏᴘᴘɪɴɢ Cᴏᴜɴᴛ Oғ {1} Tɪᴍᴇs.\n\nTᴏᴘ {2} Pʟᴀʏᴇᴅ Bʏ Yᴏᴜ:\n\n"
 
 gstats_1 : "Getting Global Stats, This could take some time..."
 gstats_2 : "No Stats Found."
