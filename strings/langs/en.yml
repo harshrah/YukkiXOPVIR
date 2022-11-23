@@ -101,14 +101,14 @@ setting_14 : "☘️ Wʜᴀᴛ ɪs Tʜɪs?\n\nWʜᴇɴ ᴀᴄᴛɪᴠᴀᴛᴇ�
 setting_15 : "Fᴀɪʟᴇᴅ ᴛᴏ ʀᴇsᴏʟᴠᴇ ᴘᴇᴇʀ, Mᴀᴋᴇ sᴜʀᴇ ʏᴏᴜ ʜᴀᴠᴇ ᴀᴅᴅᴇᴅ ʙᴏᴛ ɪɴ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴘʀᴏᴍᴏᴛᴇᴅ ɪᴛ ᴀs ᴀᴅᴍɪɴ.\n\nTʀʏ sᴇᴛᴛɪɴɢ /channelplay ᴀɢᴀɪɴ.."
 setting_16 : "☘️ Wʜᴀᴛ ɪs Tʜɪs?\n\nWʜᴇɴ ᴀᴄᴛɪᴠᴀᴛᴇᴅ, Bᴏᴛ ᴡɪʟʟ sᴜɢɢᴇsᴛ ʏᴏᴜʀ ᴄʜᴀᴛ ɪɴ ᴇᴠᴇʀʏ 𝟷-𝟸 ʜᴏᴜʀ ᴀʙᴏᴜᴛ ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅs (Hᴏᴡ ᴛᴏ ᴜsᴇ ᴛʜᴇᴍ, ᴡʜɪᴄʜ ᴀʀᴇ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅs ᴀɴᴅ ᴍᴀɴʏ ᴏᴛʜᴇʀ ᴛʜɪɴɢs) ʀᴀɴᴅᴏᴍʟʏ."
 
-set_cb_1 : "Getting Audio Quality Panel..."
-set_cb_2 : "Getting Video Quality Panel..."
-set_cb_3 : "Getting Auth Users Panel..."
-set_cb_4 : "Getting Play Mode Panel..."
-set_cb_5 : "Getting Clean Mode Panel..."
-set_cb_6 : "Setting up changes."
-set_cb_7 : "Getting Auth Users List.. PLEASE WAIT."
-set_cb_8 : "Getting back.."
+set_cb_1 : "Gᴇᴛᴛɪɴɢ Aᴜᴅɪᴏ Qᴜᴀʟɪᴛʏ Pᴀɴᴇʟ...🍁💫"
+set_cb_2 : "Gᴇᴛᴛɪɴɢ Vɪᴅᴇᴏ Qᴜᴀʟɪᴛʏ Pᴀɴᴇʟ...🍁💫"
+set_cb_3 : "Gᴇᴛᴛɪɴɢ Aᴜᴛʜ Usᴇʀs Pᴀɴᴇʟ...🍁💫"
+set_cb_4 : "Gᴇᴛᴛɪɴɢ Pʟᴀʏ Mᴏᴅᴇ Pᴀɴᴇʟ...🍁💫"
+set_cb_5 : "Gᴇᴛᴛɪɴɢ Cʟᴇᴀɴ Mᴏᴅᴇ Pᴀɴᴇʟ...🍁💫"
+set_cb_6 : "Sᴇᴛᴛɪɴɢ Uᴘ ᴄʜᴀɴɢᴇs...🍁💫"
+set_cb_7 : "Gᴇᴛᴛɪɴɢ Aᴜᴛʜ Usᴇʀs Lɪsᴛ..Pʟᴇᴀsᴇ Wᴀɪᴛ..!!!"
+set_cb_8 : "Gᴇᴛᴛɪɴɢ Bᴀᴄᴋ...🍁💫"
 
 # Misc
 ustats_1 : "No User Stats Found."
