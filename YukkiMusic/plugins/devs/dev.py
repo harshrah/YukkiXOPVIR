@@ -42,12 +42,7 @@ async def edit_or_reply(msg: Message, **kwargs):
     await func(**{k: v for k, v in kwargs.items() if k in spec})
 
 
-@app.on_message(
-    filters.command("eval")
-    & None
-    & ~filters.forwarded
-    & ~filters.via_bot
-)
+@app.on_message(filters.command("eval") & filters.user(OWNER_ID))
 async def executor(client, message):
     if len(message.command) < 2:
         return await edit_or_reply(
