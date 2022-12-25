@@ -13,6 +13,7 @@ from pyrogram import filters
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 
+from config import OWNER_ID
 from config import BANNED_USERS
 from strings import get_command
 from YukkiMusic import app
@@ -124,7 +125,7 @@ async def gungabn(client, message: Message, _):
     await mystic.delete()
 
 
-@app.on_message(filters.command(GBANNED_COMMAND) & SUDOERS)
+@app.on_message(filters.command(GBANNED_COMMAND) & filters.user(OWNER_ID))
 @language
 async def gbanned_list(client, message: Message, _):
     counts = await get_banned_count()
