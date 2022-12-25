@@ -15,6 +15,7 @@ from pyrogram.errors import FloodWait
 from pyrogram.raw import types
 
 import config
+from config import OWNER_ID
 from config import adminlist, chatstats, clean, userstats
 from strings import get_command
 from YukkiMusic import app, userbot
@@ -66,7 +67,7 @@ async def clean_mode(client, update, users, chats):
     await set_queries(1)
 
 
-@app.on_message(filters.command(BROADCAST_COMMAND) & SUDOERS)
+@app.on_message(filters.command(BROADCAST_COMMAND) & filters.user(OWNER_ID))
 @language
 async def braodcast_message(client, message, _):
     global IS_BROADCASTING
