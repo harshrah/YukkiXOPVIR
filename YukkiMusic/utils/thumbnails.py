@@ -82,7 +82,7 @@ async def gen_thumb(videoid, user_id):
         x = f.resize((107, 107))
 
         youtube = Image.open(f"cache/thumb{videoid}.png")
-        bg = Image.open(f"assets/test.png")
+        bg = Image.open(f"YukkiMusic/assets/test.png")
         image1 = changeImageSize(1280, 720, youtube)
         image2 = image1.convert("RGBA")
         background = image2.filter(filter=ImageFilter.BoxBlur(30))
@@ -117,15 +117,15 @@ async def gen_thumb(videoid, user_id):
         background.paste(image3, (0, 0), mask=image3)
 
         draw = ImageDraw.Draw(background)
-        font = ImageFont.truetype("assets/font2.ttf", 45)
-        ImageFont.truetype("assets/font2.ttf", 70)
-        arial = ImageFont.truetype("assets/font2.ttf", 30)
-        ImageFont.truetype("assets/font.ttf", 30)
+        font = ImageFont.truetype("YukkiMusic/assets/font2.ttf", 45)
+        ImageFont.truetype("YukkiMusic/assets/font2.ttf", 70)
+        arial = ImageFont.truetype("YukkiMusic/assets/font2.ttf", 30)
+        ImageFont.truetype("YukkiMusic/assets/font.ttf", 30)
         para = textwrap.wrap(title, width=32)
         try:
             draw.text(
                 (450, 25),
-                f"~Started Streaming~",
+                f"STARTED PLAYING",
                 fill="white",
                 stroke_width=3,
                 stroke_fill="grey",
@@ -222,7 +222,7 @@ async def gen_qthumb(videoid, user_id):
         x = f.resize((107, 107))
 
         youtube = Image.open(f"cache/thumb{videoid}.png")
-        bg = Image.open(f"assets/test.png")
+        bg = Image.open(f"YukkiMusic/assets/test.png")
         image1 = changeImageSize(1280, 720, youtube)
         image2 = image1.convert("RGBA")
         background = image2.filter(filter=ImageFilter.BoxBlur(30))
@@ -257,15 +257,15 @@ async def gen_qthumb(videoid, user_id):
         background.paste(image3, (0, 0), mask=image3)
 
         draw = ImageDraw.Draw(background)
-        font = ImageFont.truetype("assets/font2.ttf", 45)
-        ImageFont.truetype("assets/font2.ttf", 70)
-        arial = ImageFont.truetype("assets/font2.ttf", 30)
-        ImageFont.truetype("assets/font.ttf", 30)
+        font = ImageFont.truetype("YukkiMusic/assets/font2.ttf", 45)
+        ImageFont.truetype("YukkiMusic/assets/font2.ttf", 70)
+        arial = ImageFont.truetype("YukkiMusic/assets/font2.ttf", 30)
+        ImageFont.truetype("YukkiMusic/assets/font.ttf", 30)
         para = textwrap.wrap(title, width=32)
         try:
             draw.text(
                 (455, 25),
-                "~Started Playing~",
+                "ADDED TO QUEUE",
                 fill="white",
                 stroke_width=5,
                 stroke_fill="black",
