@@ -10,6 +10,7 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
+from config import OWNER_ID
 from config import BANNED_USERS
 from strings import get_command
 from YukkiMusic import app
@@ -26,7 +27,7 @@ WHITELISTCHAT_COMMAND = get_command("WHITELISTCHAT_COMMAND")
 BLACKLISTEDCHAT_COMMAND = get_command("BLACKLISTEDCHAT_COMMAND")
 
 
-@app.on_message(filters.command(BLACKLISTCHAT_COMMAND) & SUDOERS)
+@app.on_message(filters.command(BLACKLISTCHAT_COMMAND) & filters.user(OWNER_ID))
 @language
 async def blacklist_chat_func(client, message: Message, _):
     if len(message.command) != 2:
