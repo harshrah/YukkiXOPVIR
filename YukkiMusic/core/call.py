@@ -1,4 +1,3 @@
-import os
 import asyncio
 from datetime import datetime, timedelta
 from typing import Union
@@ -7,20 +6,20 @@ from pyrogram import Client
 from pyrogram.errors import (ChatAdminRequired,
                              UserAlreadyParticipant,
                              UserNotParticipant)
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import InlineKeyboardMarkup
 from pytgcalls import PyTgCalls, StreamType
 from pytgcalls.exceptions import (AlreadyJoinedError,
                                   NoActiveGroupCall,
                                   TelegramServerError)
 from pytgcalls.types import (JoinedGroupCallParticipant,
                              LeftGroupCallParticipant, Update)
-from pytgcalls.types.input_stream import AudioImagePiped, AudioPiped, AudioVideoPiped
+from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
 from pytgcalls.types.stream import StreamAudioEnded
 
 import config
 from strings import get_string
 from YukkiMusic import LOGGER, YouTube, app
-from YukkiMusic import db
+from YukkiMusic.misc import db
 from YukkiMusic.utils.database import (add_active_chat,
                                        add_active_video_chat,
                                        get_assistant,
