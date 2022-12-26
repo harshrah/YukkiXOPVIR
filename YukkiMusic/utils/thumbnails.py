@@ -1,24 +1,24 @@
 #CREDITS - @rockskrishnabot @itz_rocks_krishna
 
-import asyncio
 import os
-import random
 import re
-#from utils import telegraph_simple
-import aiofiles
+import random
 import aiohttp
+import asyncio
+import aiofiles
+
+import numpy as np
+
+from config import MUSIC_BOT_NAME, YOUTUBE_IMG_URL
+from YukkiMusic import app
+
+from youtubesearchpython.__future__ import VideosSearch
 from PIL import (Image, ImageDraw, ImageEnhance, ImageFilter,
                  ImageFont, ImageOps)
-from youtubesearchpython.__future__ import VideosSearch
-import numpy as np
+
 
 def make_col():
     return (random.randint(0,255),random.randint(0,255),random.randint(0,255))
-
-def remove_non_ascii(text):
-    new_val = text.encode("ascii", "ignore")
-    updated_str = new_val.decode()
-    return updated_str
 
 def changeImageSize(maxWidth, maxHeight, image):
     widthRatio = maxWidth / image.size[0]
@@ -42,11 +42,11 @@ def truncate(text):
     text2 = text2.strip()     
     return [text1,text2]
 
-async def generate_thumb(videoid,bot_name):
-    try:
-        if os.path.isfile(f"cache/{videoid}.jpg"):
-            return f"cache/{videoid}.jpg"
 
+async def gen_thumb(videoid, user_id):
+    if os.path.isfile(f"cache/{videoid}_{user_id}.jpg"):
+        return f"cache/{videoid}_{user_id}.jpg"
+    try:
         url = f"https://www.youtube.com/watch?v={videoid}"
         if 1==1:
             results = VideosSearch(url, limit=1)
@@ -54,7 +54,7 @@ async def generate_thumb(videoid,bot_name):
                 try:
                     title = result["title"]
                     title = re.sub("\W+", " ", title)
-                    title = remove_non_ascii(title.title())
+                    title = title.title()
                 except:
                     title = "Unsupported Title"
                 try:
@@ -67,7 +67,7 @@ async def generate_thumb(videoid,bot_name):
                 except:
                     views = "Unknown Views"
                 try:
-                    channel = remove_non_ascii(result["channel"]["name"])
+                    channel = result["channel"]["name"]
                 except:
                     channel = "Unknown Channel"
 
@@ -79,6 +79,22 @@ async def generate_thumb(videoid,bot_name):
                         )
                         await f.write(await resp.read())
                         await f.close()
+            wxyz = await app.get_profile_photos(user_id)
+            try:
+                wxy = await app.download_media(wxyz[0]['file_id'], file_name=f'{user_id}.jpg')
+            except:
+                hehe = await app.get_profile_photos(app.id)
+                wxy = await app.download_media(hehe[0]['file_id'], file_name=f'{app.id}.jpg')
+            xy = Image.open(wxy)
+
+            a = Image.new('L', [640, 640], 0)
+            b = ImageDraw.Draw(a)
+            b.pieslice([(0, 0), (640,640)], 0, 360, fill = 255, outline = "white")
+            c = np.array(xy)
+            d = np.array(a)
+            e = np.dstack((c, d))
+            f = Image.fromarray(e)
+            x = f.resize((170, 170))
 
             youtube = Image.open(f"cache/thumb{videoid}.jpg")
             image1 = changeImageSize(1280, 720, youtube)
@@ -87,10 +103,9 @@ async def generate_thumb(videoid,bot_name):
             enhancer = ImageEnhance.Brightness(background)
             background = enhancer.enhance(0.6)
             image2 = background
-                                                                                            
-            circle = Image.open("assets/circle.png")
 
-            # changing circle color
+            circle = Image.open("assets/circle.png")
+            
             im = circle
             im = im.convert('RGBA')
             color = make_col()
@@ -103,7 +118,6 @@ async def generate_thumb(videoid,bot_name):
 
             im2 = Image.fromarray(data)
             circle = im2
-            # done
 
             image3 = image1.crop((280,0,1000,720))
             lum_img = Image.new('L', [720,720] , 0)
@@ -114,10 +128,11 @@ async def generate_thumb(videoid,bot_name):
             final_img_arr = np.dstack((img_arr,lum_img_arr))
             image3 = Image.fromarray(final_img_arr)
             image3 = image3.resize((600,600))
-            
 
-            image2.paste(image3, (50,70), mask = image3)
-            image2.paste(circle, (0,0), mask = circle)
+            image2.paste(image3, (50,70), mask=image3)
+            image2.paste(x, (470, 490), mask=x)
+            image2.paste(circle, (0,0), mask=circle)
+            
 
             # fonts
             font1 = ImageFont.truetype('assets/font.ttf', 30)
@@ -126,7 +141,7 @@ async def generate_thumb(videoid,bot_name):
             font4 = ImageFont.truetype('assets/font2.ttf', 35)
 
             image4 = ImageDraw.Draw(image2)
-            image4.text((10, 10), bot_name, fill="white", font = font1, align ="left") 
+            image4.text((10, 10), MUSIC_BOT_NAME, fill="black", font = font1, align ="left")
             image4.text((670, 150), "NOW PLAYING", fill="white", font = font2, stroke_width=2, stroke_fill="white", align ="left") 
 
             # title
@@ -142,16 +157,16 @@ async def generate_thumb(videoid,bot_name):
             image4.text((670, 450), text=views, fill="white", font = font4, align ="left") 
             image4.text((670, 500), text=duration, fill="white", font = font4, align ="left") 
             image4.text((670, 550), text=channel, fill="white", font = font4, align ="left")
-            
+
             image2 = ImageOps.expand(image2,border=20,fill=make_col())
             image2 = image2.convert('RGB')
-            image2.save(f"cache/{videoid}.jpg")
-            file = f"cache/{videoid}.jpg"
-            #telegraph_link = await telegraph_simple(file)
-
-            #os.remove(file)
-
-            return file #telegraph_link
+            try:
+                os.remove(f"cache/thumb{videoid}.png")
+            except:
+                pass
+            image2.save(f"cache/{videoid}_{user_id}.jpg")
+            file = f"cache/{videoid}_{user_id}.jpg"
+            return file
     except Exception as e:
         print(e)
-        return "assets/Youtube.jpeg"
+        return YOUTUBE_IMG_URL
