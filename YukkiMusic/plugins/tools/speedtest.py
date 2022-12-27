@@ -8,12 +8,8 @@
 # All rights reserved.
 
 import asyncio
-import os
-
 import speedtest
-import wget
 from pyrogram import filters
-
 from strings import get_command
 from YukkiMusic import app
 from YukkiMusic.misc import SUDOERS
@@ -35,7 +31,7 @@ def testspeed(m):
         m = m.edit("Sharing SpeedTest Results")
     except Exception as e:
         return m.edit(e)
-    return result, path
+    return result
 
 
 @app.on_message(filters.command(SPEEDTEST_COMMAND) & SUDOERS)
