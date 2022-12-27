@@ -109,9 +109,9 @@ async def gen_thumb(videoid, user_id):
             color = make_col()
 
             data = np.array(im)
-            white, alpha = data.T
+            red, green, blue, alpha = data.T
 
-            white_areas = (white == 255)
+            white_areas = (red == 255) & (blue == 255) & (green == 255)
             data[..., :-1][white_areas.T] = color
 
             im2 = Image.fromarray(data)
@@ -156,7 +156,7 @@ async def gen_thumb(videoid, user_id):
             image4.text((670, 500), text=duration, fill="white", font = font4, align ="left") 
             image4.text((670, 550), text=channel, fill="white", font = font4, align ="left")
 
-            image2 = ImageOps.expand(image2,border=20,fill="white"
+            image2 = ImageOps.expand(image2,border=20,fill=make_col())
             image2 = image2.convert('RGB')
             try:
                 os.remove(f"cache/thumb{videoid}.png")
