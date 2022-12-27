@@ -70,18 +70,19 @@ async def gen_thumb(videoid, user_id):
                     channel = "Unknown Channel"
 
             async with aiohttp.ClientSession() as session:
-            async with session.get(thumbnail) as resp:
-                if resp.status == 200:
-                    f = await aiofiles.open(f"cache/thumb{videoid}.png", mode="wb")
-                    await f.write(await resp.read())
-                    await f.close()
-
-        try:
+                async with session.get(f"http://img.youtube.com/vi/{videoid}/maxresdefault.jpg") as resp:
+                    if resp.status == 200:
+                        f = await aiofiles.open(
+                            f"cache/thumb{videoid}.jpg", mode="wb"
+                        )
+                        await f.write(await resp.read())
+                        await f.close()
             wxyz = await app.get_profile_photos(user_id)
-            wxy = await app.download_media(wxyz[0]['file_id'], file_name=f'{user_id}.jpg')
-        except:
-            hehe = await app.get_profile_photos(app.id)
-            wxy = await app.download_media(hehe[0]['file_id'], file_name=f'{app.id}.jpg')
+            try:
+                wxy = await app.download_media(wxyz[0]['file_id'], file_name=f'{user_id}.jpg')
+            except:
+                hehe = await app.get_profile_photos(app.id)
+                wxy = await app.download_media(hehe[0]['file_id'], file_name=f'{app.id}.jpg')
             xy = Image.open(wxy)
 
             a = Image.new('L', [640, 640], 0)
@@ -155,7 +156,7 @@ async def gen_thumb(videoid, user_id):
             image4.text((670, 500), text=duration, fill="white", font = font4, align ="left") 
             image4.text((670, 550), text=channel, fill="white", font = font4, align ="left")
 
-            image2 = ImageOps.expand(image2,border=20,fill=make_col())
+            image2 = ImageOps.expand(image2,border=0,fill=make_col())
             image2 = image2.convert('RGB')
             try:
                 os.remove(f"cache/thumb{videoid}.png")
