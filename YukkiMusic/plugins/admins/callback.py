@@ -248,7 +248,6 @@ async def del_back_playlist(client, CallbackQuery, _):
         queued = check[0]["file"]
         title = (check[0]["title"]).title()
         user = check[0]["by"]
-        user_id = check[0]["user_id"]
         streamtype = check[0]["streamtype"]
         videoid = check[0]["vidid"]
         status = True if str(streamtype) == "video" else None
@@ -266,7 +265,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                     _["call_9"]
                 )
             button = telegram_markup(_, chat_id)
-            img = await gen_thumb(videoid, user_id)
+            img = await gen_thumb(videoid)
             run = await CallbackQuery.message.reply_photo(
                 photo=img,
                 caption=_["stream_1"].format(
@@ -298,7 +297,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             except Exception:
                 return await mystic.edit_text(_["call_9"])
             button = stream_markup(_, videoid, chat_id)
-            img = await gen_thumb(videoid, user_id)
+            img = await gen_thumb(videoid)
             run = await CallbackQuery.message.reply_photo(
                 photo=img,
                 caption=_["stream_1"].format(
@@ -364,7 +363,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                 db[chat_id][0]["markup"] = "tg"
             else:
                 button = stream_markup(_, videoid, chat_id)
-                img = await gen_thumb(videoid, user_id)
+                img = await gen_thumb(videoid)
                 run = await CallbackQuery.message.reply_photo(
                     photo=img,
                     caption=_["stream_1"].format(
