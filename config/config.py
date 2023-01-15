@@ -17,14 +17,14 @@ from pyrogram import filters
 load_dotenv()
 
 # Get it from my.telegram.org
-API_ID = int(getenv("API_ID", ""))
-API_HASH = getenv("API_HASH")
+API_ID = int(getenv("API_ID", "11550403"))
+API_HASH = getenv("API_HASH", "b77c85d4e2ec851bc69613a7cffd567d")
 
 ## Get it from @Botfather in Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN")
+BOT_TOKEN = getenv("BOT_TOKEN", "5925550254:AAEKtovDrRCycAWamAil626S3gasDbA6_uU")
 
 # Database to save your chats and stats... Get MongoDB:-  https://telegra.ph/How-To-get-Mongodb-URI-04-06
-MONGO_DB_URI = getenv("MONGO_DB_URI", None)
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://vcbot:vcbot@cluster0.yqipgxg.mongodb.net/?retryWrites=true&w=majority")
 
 # Custom max audio(music) duration for voice chat. set DURATION_LIMIT in variables with your own time(mins), Default to 60 mins.
 DURATION_LIMIT_MIN = int(
@@ -37,14 +37,14 @@ SONG_DOWNLOAD_DURATION = int(
 )  # Remember to give value in Minutes
 
 # You'll need a Private Group ID for this.
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", ""))
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001618068091"))
 
 # A name for your Music bot.
-MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME")
+MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME","harsh")
 
 # Your User ID.
 OWNER_ID = list(
-    map(int, getenv("OWNER_ID", "2116857965").split())
+    map(int, getenv("OWNER_ID", "5917642576").split())
 )  # Input type must be interger
 
 # Get it from http://dashboard.heroku.com/account
@@ -66,10 +66,10 @@ GIT_TOKEN = getenv("GIT_TOKEN", None)
 # Only  Links formats are  accepted for this Var value.
 SUPPORT_CHANNEL = getenv(
     "SUPPORT_CHANNEL", None
-)  # Example:- https://t.me/TheYukki
+)  # Example:- https://t.me/alone_support
 SUPPORT_GROUP = getenv(
     "SUPPORT_GROUP", None
-)  # Example:- https://t.me/YukkiSupport
+)  # Example:- https://t.me/alone_support
 
 # Set it in True if you want to leave your assistant after a certain amount of time. [Set time via AUTO_LEAVE_ASSISTANT_TIME]
 AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "True")
@@ -135,7 +135,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(
 
 
 # You'll need a Pyrogram String Session for these vars. Generate String from our session generator bot @YukkiStringBot
-STRING1 = getenv("STRING_SESSION", None)
+STRING1 = getenv("STRING_SESSION", "BQCF-q1leSENLqFa8TkkiXJzV3GH0FQvX8I0IyksOCRkg0LHIOHt2uCWFa8z2b58JiGTpvf6YXlYRpvejE5PWMs6AATzI_sWKP8FU3JZYD4wVnEkU2aaJo8HuSvCRsafsg5hZpb7Vnq_PSRSzpY4J80V9z6WUQJ8lHyV8bTypf_8jUobeCCQKo74WkBg7wcSRwtRl9Jwkg7eoc6j1vmbV5rK-UtrimgL9qF2C9ST5dbeIAKZPkUTEKwlFYrXoJ0MSlwYz2bLC3T8G5DCEvSAqhrpKeLYZgH-CVDiRAlqJxzLNC-8-RSy5eygf9kFpUsZAJ8B182JkQop-CbYX7vykGGeAAAAAWC4D1AA")
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
